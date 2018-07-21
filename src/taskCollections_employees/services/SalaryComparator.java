@@ -4,6 +4,7 @@ import taskCollections_employees.models.Employee;
 
 import java.util.Comparator;
 
+/*Comparing of Employees list by average monthly salary.*/
 public class SalaryComparator implements Comparator<Employee> {
 
     @Override

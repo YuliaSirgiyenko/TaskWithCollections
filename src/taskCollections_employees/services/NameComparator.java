@@ -4,6 +4,7 @@ import taskCollections_employees.models.Employee;
 
 import java.util.Comparator;
 
+/*Comparing of Employees list by name.*/
 public class NameComparator implements Comparator<Employee> {
 
     @Override

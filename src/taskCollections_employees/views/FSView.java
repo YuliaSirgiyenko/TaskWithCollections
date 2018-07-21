@@ -12,6 +12,7 @@ public class FSView {
 
     private static final File FILE = new File("EmployeesList");
 
+    /*Creation of file if it doesn't exist.*/
     public FSView(){
         if (!FILE.exists()){
             try {
@@ -23,6 +24,7 @@ public class FSView {
         }
     }
 
+    /*Writing of collection to file.*/
     public void writeAll(List<Employee> list){
         try (FileWriter writer = new FileWriter(FILE, true)){
             for (Employee i : list) {
@@ -34,6 +36,7 @@ public class FSView {
         }
     }
 
+    /*Reading of collection from file with exception in case of incorrect format of incoming data*/
     public List<Employee> readAll(){
         List<Employee> readedList = new ArrayList<>();
 
