@@ -19,7 +19,7 @@ public abstract class Employee implements Comparable<Employee> {
         return name;
     }
 
-    abstract double setAvMonthlySalary();
+    abstract void setAvMonthlySalary();
 
     public double getAvMonthlySalary() {
         return avMonthlySalary;

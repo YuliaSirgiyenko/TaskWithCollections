@@ -9,12 +9,12 @@ public class EmployeeFixed extends Employee {
     public EmployeeFixed(int id, String name, double fixedMonthlyPayment){
         super(id, name);
         this.fixedMonthlyPayment = fixedMonthlyPayment;
-        this.avMonthlySalary = setAvMonthlySalary();
+        setAvMonthlySalary();
     }
 
     @Override
-    public double setAvMonthlySalary() {
-        return fixedMonthlyPayment;
+    public void setAvMonthlySalary() {
+        this.avMonthlySalary = fixedMonthlyPayment;
     }
 
     @Override

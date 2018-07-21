@@ -11,14 +11,14 @@ public class EmployeeHourly extends Employee {
     public EmployeeHourly(int id, String name, double hourlyRate){
         super(id, name);
         this.hourlyRate = hourlyRate;
-        this.avMonthlySalary = setAvMonthlySalary();
+        setAvMonthlySalary();
     }
 
+    /*Calculation of average monthly salary with established scale for further correct comparison.*/
     @Override
-    public double setAvMonthlySalary() {
-        double avMonthlySalary = new BigDecimal(20.8 * 8 * hourlyRate).
+    public void setAvMonthlySalary() {
+        this.avMonthlySalary = new BigDecimal(20.8 * 8 * hourlyRate).
                 setScale(2, RoundingMode.HALF_EVEN).doubleValue();
-        return avMonthlySalary;
     }
 
     @Override
